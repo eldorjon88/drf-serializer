@@ -11,6 +11,9 @@ class Category(models.Model):
     def __repr__(self):
         return self.name
     
+    def __str__(self):
+        return self.name
+    
 
 class Task(models.Model):
     name = models.CharField(max_length=64, unique=True)
@@ -23,4 +26,7 @@ class Task(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
+        return self.name
+    
+    def __str__(self):
         return self.name
